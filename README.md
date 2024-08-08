@@ -35,7 +35,7 @@ The config files are under the path of:
 ```
 As we use the ADE2016Challenge as data, the dataset config files are in:
 ```shell
-\TCFormer_n\configs\_base_\datasets\ade20k.py
+/TCFormer_n/configs/_base_/datasets/ade20k.py
 ```
 where you can change the scale arguments according to your own need. Here I use (512, 512) which is (512, 683) in raw img and (2048, 512) in the raw code provided by mmseg official.
 And you can adjust your trainning process by change arguments in shedule configuration files.
@@ -45,7 +45,7 @@ python train.py
 ```
 to train the model, and the trainning log and checkpoint will be saved in the work directory you set. The checkpoint will be saved and the model will be validated all according to the intervals you set in shedule files in:
 ```shell
-\TCFormer_n\configs\_base_\schedules
+/TCFormer_n/configs/_base_/schedules
 ```
 ### Testing the model
 After trainning, the checkpoint files are saved in the work directory you just set, and turn to the file test.py which is in the same directory as train.py .
