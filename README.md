@@ -22,3 +22,45 @@ torch                         2.0.0+cu118
 torchvision                   0.15.1+cu118
 ```
 See others in EnvInfo.txt
+### How to run the code of trainning
+After configuring the env, pay attention to the file /TCFormer_n/tools/train.py, first you should run the command:
+```shell
+conda activate nat  # or the env name you created for this pipeline
+```
+then you should change the value of '--config' and '--work-dir' to the path of the config file of the model you want to train and the work directory you want to restore the model and log file respectively.
+And you can change the args in the config files according to your own need when necessary.
+The config files are under the path of:
+```shell
+/TCFormer_n/configs/
+```
+As we use the ADE2016Challenge as data, the dataset config files are in:
+```shell
+\TCFormer_n\configs\_base_\datasets\ade20k.py
+```
+where you can change the scale arguments according to your own need. Here I use (512, 512) which is (512, 683) in raw img and (2048, 512) in the raw code provided by mmseg official.
+And you can adjust your trainning process by change arguments in shedule configuration files.
+After configuring, you can just run:
+```shell
+python train.py
+```
+to train the model, and the trainning log and checkpoint will be saved in the work directory you set. The checkpoint will be saved and the model will be validated all according to the intervals you set in shedule files in:
+```shell
+\TCFormer_n\configs\_base_\schedules
+```
+### Testing the model
+After trainning, the checkpoint files are saved in the work directory you just set, and turn to the file test.py which is in the same directory as train.py .
+You need to change the args below:
+```shell
+'--config' # just the same as trainning stage
+'--checkpoint' # the checkpoint you want to load and test saved from trainning stage
+'--work-dir' # 'if specified, the evaluation metric results will be dumped into the directory as json'
+'--out' # 'The directory to save output prediction for offline evaluation'
+'--show' # 'show prediction results'
+'--show-dir' # 'directory where painted images will be saved. If specified, it will be automatically saved to the work_dir/timestamp/show_dir'
+'--tta' # 'Test time augmentation'
+```
+After resetting the arguments, you can run command:
+```shell
+test.py
+```
+to test the model.
