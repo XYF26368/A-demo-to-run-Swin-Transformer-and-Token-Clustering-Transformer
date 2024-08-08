@@ -67,4 +67,25 @@ to test the model.
 
 # References
 ```latex
+@misc{mmseg2020,
+    title={{MMSegmentation}: OpenMMLab Semantic Segmentation Toolbox and Benchmark},
+    author={MMSegmentation Contributors},
+    howpublished = {\url{https://github.com/open-mmlab/mmsegmentation}},
+    year={2020}
+}
+@inproceedings{zeng2022not,
+  title={Not All Tokens Are Equal: Human-centric Visual Analysis via Token Clustering Transformer},
+  author={Zeng, Wang and Jin, Sheng and Liu, Wentao and Qian, Chen and Luo, Ping and Ouyang, Wanli and Wang, Xiaogang},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={11101--11111},
+  year={2022}
+}
+
+@article{zeng2024tcformer,
+  title={TCFormer: Visual Recognition via Token Clustering Transformer},
+  author={Zeng, Wang and Jin, Sheng and Xu, Lumin and Liu, Wentao and Qian, Chen and Ouyang, Wanli and Luo, Ping and Wang, Xiaogang},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
+}
 ```
