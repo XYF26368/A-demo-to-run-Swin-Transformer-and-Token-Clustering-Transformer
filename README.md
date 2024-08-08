@@ -10,5 +10,8 @@ mmengine                      0.10.4
 mmpose                        1.3.2               
 mmsegmentation                1.2.2
 numpy                         1.26.3
-
+timm                          1.0.7
+torch                         2.0.0+cu118
+torchvision                   0.15.1+cu118
 ```
+See others in EnvInfo.txt
