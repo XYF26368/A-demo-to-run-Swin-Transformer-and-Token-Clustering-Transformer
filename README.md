@@ -2,6 +2,13 @@
 The original code of Swin Transformer and Token Clustering Transformer haven't been repaired for a long time and are no longer able to run since they  both used the mm-lab pipeline, which have experienced significant change. This code provide an example how to run the two model under new criterion. 
 
 ## Get Started
+## Code Link
+```shell
+https://disk.pku.edu.cn/link/AAABD7E5FE06D94E81BBB30223F9FED2ED
+Name: TCFormer_n.zip
+Expires: Never
+Pickup Code: 1234
+```
 ### Env Configuration
 ```shell
 mmcv                          2.1.0
