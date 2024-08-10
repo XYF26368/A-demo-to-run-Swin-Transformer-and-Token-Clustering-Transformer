@@ -28,7 +28,7 @@ After configuring the env, pay attention to the file /TCFormer_n/tools/train.py,
 conda activate nat  # or the env name you created for this pipeline
 ```
 then you should change the value of '--config' and '--work-dir' to the path of the config file of the model you want to train and the work directory you want to restore the model and log file respectively.
-And you can change the args in the config files according to your own need when necessary.
+And you can change the args in the config files according to your own need when necessary. The config files contains the trainning schedules, dataset configs, upernet configs, and default runtime(no need to change this).
 The config files are under the path of:
 ```shell
 /TCFormer_n/configs/
